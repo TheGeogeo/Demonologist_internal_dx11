@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{04B17470-CB82-4724-904B-25445926AB86}</ProjectGuid>
+    <RootNamespace>ImGuiDirectX11KieroHook</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Demonologist_internal_dx11</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;%programfiles(x86)%\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%programfiles(x86)%\Microsoft DirectX SDK (June 2010)\Include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;%programfiles(x86)%\Microsoft DirectX SDK (June 2010)\Lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%programfiles(x86)%\Microsoft DirectX SDK (June 2010)\Include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CheatMain.cpp" />
+    <ClCompile Include="esp.cpp" />
+    <ClCompile Include="hotkey.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="kiero\kiero.cpp" />
+    <ClCompile Include="kiero\minhook\src\buffer.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="kiero\minhook\src\hook.c" />
+    <ClCompile Include="kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuGUI.cpp" />
+    <ClCompile Include="SDK\SDK\Basic.cpp" />
+    <ClCompile Include="SDK\SDK\BP_Entity_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_Flashlight_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_HidingSpotVisual_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_LobbyCharacter_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_PlayerCharacter_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_ShiversController_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_ShiversGameInstance_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_ShiversGameMode_BaseOnline_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_ShiversGameMode_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_ShiversLobbyGameMode_Online_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_Shivers_GameState_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_Shivers_LobbyPlayerState_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_SpectatorCharacter_functions.cpp" />
+    <ClCompile Include="SDK\SDK\BP_Tool_functions.cpp" />
+    <ClCompile Include="SDK\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="SDK\SDK\Engine_functions.cpp" />
+    <ClCompile Include="utilfunction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kiero\minhook\dll_resources\MinHook.def" />
+    <None Include="SDK\Assertions.inl" />
+    <None Include="SDK\NameCollisions.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="kiero\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cfg.h" />
+    <ClInclude Include="CheatMain.h" />
+    <ClInclude Include="esp.h" />
+    <ClInclude Include="HookFunction.h" />
+    <ClInclude Include="hotkey.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="kiero\kiero.h" />
+    <ClInclude Include="kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="kiero\minhook\src\buffer.h" />
+    <ClInclude Include="kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="mainoffset.h" />
+    <ClInclude Include="MenuGUI.h" />
+    <ClInclude Include="SDK\PropertyFixup.hpp" />
+    <ClInclude Include="SDK\SDK.hpp" />
+    <ClInclude Include="SDK\SDK\Basic.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Entity_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Entity_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Flashlight_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Flashlight_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_HidingSpotVisual_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_HidingSpotVisual_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_LobbyCharacter_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_LobbyCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_PlayerAssets_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_PlayerCharacter_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_PlayerCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_RoomIdentifier_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversController_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversController_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameInstance_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameInstance_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameMode_BaseOnline_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameMode_BaseOnline_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameMode_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversGameMode_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversLobbyGameMode_Online_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_ShiversLobbyGameMode_Online_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Shivers_GameState_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Shivers_GameState_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Shivers_LobbyPlayerState_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Shivers_LobbyPlayerState_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_SpectatorCharacter_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_SpectatorCharacter_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Tool_classes.hpp" />
+    <ClInclude Include="SDK\SDK\BP_Tool_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\CoreUObject_classes.hpp" />
+    <ClInclude Include="SDK\SDK\CoreUObject_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\CoreUObject_structs.hpp" />
+    <ClInclude Include="SDK\SDK\Engine_classes.hpp" />
+    <ClInclude Include="SDK\SDK\Engine_parameters.hpp" />
+    <ClInclude Include="SDK\SDK\Engine_structs.hpp" />
+    <ClInclude Include="SDK\UnrealContainers.hpp" />
+    <ClInclude Include="SDK\UtfN.hpp" />
+    <ClInclude Include="singleton.h" />
+    <ClInclude Include="utilfunction.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
